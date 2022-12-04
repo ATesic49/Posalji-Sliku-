@@ -1,0 +1,312 @@
+#home{
+    width: 100%;
+    
+    }
+    #home .prvi {
+        height: 400px;
+        max-height: 450px;
+        background-color: white;
+        color: black;
+        display:flex ;
+        align-items:flex-end;
+        justify-content: left;
+        margin: 0 0 100px 180px;
+    }
+    #home .prvi h2{
+        font-size:var(--font-size-x-large);
+    
+    }
+    
+    #home .prvi span{
+    color: #646464;
+    }
+    
+    
+    #home .container {
+        width: 100%;
+    }
+    
+    #home .container .img {
+        position: relative;
+        background-image:url(./imagesForSite/Sam-and-Milly-Wedding-905-scaled.jpg);
+        width: 100%;
+        min-height: 700px;
+        background-size: cover;
+        background-position: center;
+       
+    }
+    #home .img .button a{
+    position: absolute;
+    z-index: 2;
+    bottom:100px;
+    right: 100px;
+    color: white;
+    background-color: transparent;
+    display: block;
+    width:180px;
+    padding: 12px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 25px;
+    font-size: var(--font-size-mid);
+    border: 2px solid white;
+    transition: .25s ease-in-out;
+    }
+    #home .img .button a:hover{
+        cursor: pointer;
+        color: black;
+        background-color: white;
+    }
+    #home .img .text1{
+        z-index: 2;
+        color: white;
+        position: absolute;
+        bottom: 200px;
+        float: left;
+        left: 50px;
+    
+    }
+    #home .img .text1 p{
+        font-size:var(--font-size-mid);
+    }
+    #home .img .text1 h2{
+        font-size: var(--font-size-large);
+    }
+    #home .container .img::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        background-color: #000;
+        z-index: 1;
+    
+    }
+    
+    /* TRECE */
+    #home .container .trece {
+        margin: 0;
+        padding: 150px 0;
+        height:1150px;
+        max-height: 1200px;
+        background-color: rgba(202, 202, 202, 0.632);
+        display: flex;
+        flex-direction: column;
+    }
+    #home .container .natpiss{
+        margin:  0 0px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #home .container .text{
+        margin: auto 0;
+        max-width: 350px;
+        height: 175px;
+        text-align: center;
+    }
+    #home .container .stvari{
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        width: 350px;
+        height: 175px;
+        margin: 20px;
+    }
+    #home .container .j{
+        background-image: url(./imagesForSite/reflective-sunset-lake-tahoe_t20_1WNjlO-750x499.jpg);
+
+    }
+    #home .container  .d{
+        background-image: url(./imagesForSite/pexels-pixabay-414102.jpg);
+
+    }
+    #home .container  .t{
+        background-image: url(./imagesForSite/mid-adult-man-skiing-down-mountain--golden--british-columbia--canada-480984215-5b50d2f2c9e77c005b1b87be.jpg);
+
+    }
+    #home .container .c{
+        background-image: url(./imagesForSite/switzerland-in-pictures-most-beautiful-places-matterhorn.jpg);
+
+    }
+    
+    #home .cetvrto{
+        background-color: rgb(15, 15, 15);
+        margin: 0;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        min-height:800px;
+        
+    }
+    #home .cetvrto .cetvrtoa{
+        text-align: center;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+       
+    }
+    #home .cetvrto .cetvrtoa .heading{
+        min-width:400px ;
+        margin:0 10%;
+    
+    }
+    #home .cetvrto .cetvrtoa .heading h2{
+    font-size: var(--font-size-large);
+    }
+    #home .cetvrto .cetvrtoa .heading span{
+    color: #646464;
+    }
+    #home .cetvrto .cetvrtoa .text4{
+        margin: 0 10% 0 0;
+        max-height: 100px;
+    }
+    
+    #home .cetvrto .cetvrtob{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+    #home .cetvrto .cetvrtob .boxholder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    #home .cetvrto .cetvrtob .box{
+    height: 350px;
+    max-height: 350px;
+    width: 219px;
+    background-color: #777777;
+    margin: 100px 20px;
+    
+    }
+    #home .cetvrto .cetvrtob .box:nth-child(2){
+        background-color:#e4e4e4;
+    
+    
+    }
+    #home .cetvrto .cetvrtob .box:nth-child(4){
+        background-color: #e4e4e4;
+    
+    }
+    
+    
+    #home .cetvrto .cetvrtob .box .logo{
+    
+        background-image: url(./images/Untitled-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        margin:  10px 20px;
+        height: 100px;
+    }
+    #home .cetvrto .cetvrtob .box .textbox{
+        margin: 40px 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    #home .peti {
+        min-height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: top;
+    }
+    #home .peti .levi-deo{
+    width: 250px;
+    margin: 60px 100px;
+    }
+    #home .peti .levi-deo .h2 h2{
+        font-size: var(--font-size-x-large);
+    }
+    #home .peti .levi-deo .h2 span{
+        color: #646464;
+    }
+    #home .peti .desni-deo{
+        
+        max-width: 50%;
+        margin: 60px 100px;
+    }
+    #home .peti .desni-deo .h4 h4{
+    
+        font-size: var(--font-size-large);
+    }
+    #home .peti .desni-deo .p p{
+        margin: 50px 0;
+        font-size: var(--font-size-mid);
+    }
+    #home .peti .desni-deo .dugme {
+        display: flex;
+        align-items: center;
+    
+    }
+    #home .peti .desni-deo .dugme a{
+        margin: 10px auto;
+        border: 2px solid black;
+        border-radius: 25px;
+        padding: 10px;
+        font-size: var(--font-size-mid);
+        font: bold;
+        padding: 10px 20px;
+        transition: .5s;
+    }
+    #home .peti .desni-deo .dugme a{
+        color: #000;
+    }
+    #home .peti .desni-deo .dugme a:hover{
+        color: white;
+        cursor: pointer;
+        background-color: #000;
+    }
+    
+    
+/* MEDIA */
+@media screen and (max-width:925px) {
+/* Cetvrti */
+#home.cetvrtoa .heading{
+    margin: 2px;
+}
+#home .cetvorob .boxholder {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+}
+#home .cetvrto{
+    max-height: 2400px;
+
+    
+}
+
+
+#home .cetvrtoa{
+    flex-direction: column;
+}
+#home .cetvrto .cetvrtob{
+    flex-direction: column;
+}
+
+
+
+/* PETI */
+#home .peti {
+    position: flex;
+    flex-direction: column;
+}
+#home .peti .levi-deo{
+    margin: 20px;
+}
+
+
+}
+    
+    

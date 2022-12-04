@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odstampaj mi sliku</title>
+    <link rel="stylesheet" href='styles.css'>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+    <script src="server.js" defer enctype="multipart/form-data"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn"> 
+            <i class="fas fa-bars" ></i></label>
+        <label class="logo">Odstampaj mi sliku</label>
+            <ul>
+                <li class="nav"><a class="" href="/">Pocetna</a></li>
+                <li class="nav"><a href="/about-us">O nama</a></li>
+                <li class="nav"><a href="/">Usluge</a></li>
+                <li class="nav"><a href="/send">Naruci</a></li>
+            </ul>
+    </nav>
+    <%- body %> 
+    <br>
+<footer>
+ <div class="faq">
+    <h1>FAQs</h1>
+    <div class="feqsi">
+        <div class="pitanja">
+            <div class="list"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p><span>+</span></div>
+            <div class="tex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repudiandae unde dolores. Fuga facilis perspiciatis necessitatibus assumenda, quisquam consequatur beatae aut voluptatum ut, ducimus ab aliquam, consequuntur veritatis debitis reprehenderit.</div>
+           </div>
+            <div class="pitanja">
+                <div class="list"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p><span>+</span></div>
+                <div class="tex ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repudiandae unde dolores. Fuga facilis perspiciatis necessitatibus assumenda, quisquam consequatur beatae aut voluptatum ut, ducimus ab aliquam, consequuntur veritatis debitis reprehenderit.</div>
+                </div>
+                <div class="pitanja">
+                    <div class="list"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p><span>+</span></div>
+                    <div class="tex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repudiandae unde dolores. Fuga facilis perspiciatis necessitatibus assumenda, quisquam consequatur beatae aut voluptatum ut, ducimus ab aliquam, consequuntur veritatis debitis reprehenderit.</div>
+                    </div>
+                    <div class="pitanja">
+                        <div class="list"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p><span>+</span></div>
+                        <div class="tex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repudiandae unde dolores. Fuga facilis perspiciatis necessitatibus assumenda, quisquam consequatur beatae aut voluptatum ut, ducimus ab aliquam, consequuntur veritatis debitis reprehenderit.</div>
+                        </div>
+    </div>
+    <div class="contact-us">Contact us</div>
+ </div>
+ <div class="lets-work-together">
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218240.89618711272!2d-0.35226800044814693!3d51.533415028566054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2z0JHQuNCzINCR0LXQvQ!5e0!3m2!1ssr!2srs!4v1665087522612!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="name-and-stuff">
+        <form action="/sendEmail" method="post">
+            <div><input type="text" name="imezagmail" placeholder="Name"></div>
+             <div><input type="email"  placeholder="E-Mail" pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" name="gmailzagmail"></div>
+             <div><textarea name="porukazagmail" id="" cols="30" rows="10" placeholder="Message"></textarea></div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+ </div>
+ <div class="footer">
+    <div>
+        <div class="uli">    <ul>
+            <li class="nav"><a class="hovered onthis" href="#">Home</a></li>
+            <li class="nav"><a href="#">About</a></li>
+            <li class="nav"><a href="#">Services</a></li>
+            <li class="nav"><a href="#">Contact</a></li>
+            <li class="nav"><a href="#">Feedback</a></li>
+        </ul>
+
+        <div class="fbi">
+            <a href="facebook.com">Facebook</a>
+            <a href=".com">Instagram</a>
+            <a href="facebook.com">Twitter</a>
+            </div>
+
+    </div>
+  
+</div>
+<div>
+<div class="your-street">
+<h2>Your Adress And Street Number</h2>
+
+<h2>Your Gmail</h2>
+
+<h2>Your Phone number</h2>
+
+</div>
+
+</div>
+
+
+</div>
+</footer>
+    
+</body>
+</html>

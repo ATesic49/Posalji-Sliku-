@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer> 
+        const link=document.querySelectorAll(".nav a")
+        console.log(link)
+        link[3].classList.add('active')
+        </script>
+        <link rel="stylesheet" href="aboutUs.css">
+</head>
+<body>
+    <body>
+        <h1 style="color: red;"><%= locals.error %> </h1>
+        <form action="/send" method="post" enctype="multipart/form-data">
+            <label for="images">Input your image</label>
+            <input type="file" name="images" multiple required>
+            <input type="email"   pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" required value="<%= locals.valueForEmail %>" name="sendersGmail" >
+            <input type="number" name="numberOfCopies" value=<%= locals.valueForNumber || 1 %>  min="1">
+            <input type="submit" value="submit">
+    
+        </form>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+#about .prvi {
+    min-height: 1200px;
+    display:flex;
+    flex-direction: column;
+}
+#about .prvi .gornji-deo{
+    min-height: 400px;
+    display: flex;
+    position: relative;
+}
+#about .prvi .gornji-deo .text{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+#about .prvi .gornji-deo .text h1{
+    font-size: var(--font-size-x-large);
+}
+#about .prvi .donji-deo{
+    background-image: url(./images/Sam-and-Milly-Wedding-905-scaled.jpg);
+    position: relative;
+    min-height: 800px;
+    background-size:cover;
+    background-position: center;
+}
+#about .prvi .donji-deo::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right:0;
+    opacity: 0.5;
+}
+
+#about .drugi {
+    min-height: 100px;
+    margin: 100px 20px 100px 20px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+#about .drugi .levi-deo{
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    display: flex;
+    width: 300px;
+    margin: 0 20px;
+    font-size: var(--font-size-mid);
+}
+#about .drugi .desni-deo{
+    letter-spacing: .5px;
+    width: 500px;
+    margin: 10px;
+    text-align:center;
+    font-weight: 600;
+
+
+}
+#about .treci{
+    margin: 150px 100px 50px 100px;
+    min-height: 300px;
+}
+#about .treci .text{
+    font-size: var(--font-size-large);
+    margin: 20px 50px;
+    text-align:center;
+    font-weight: 600;
+}
+#about .treci .text span{
+    color: #646464;
+}
+
+
+
+
+

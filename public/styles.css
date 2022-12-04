@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Inconsolata:wght@300;400&family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+
+*{
+    
+    --font-size-small:13px;
+    --font-size-mid:20px;
+    --font-size-large:36px;
+    --font-size-x-large: 42px;
+   --primary-color:rgb(255, 255, 255);
+   --font-family:'El Messiri','sans-serif';
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style-type: none;
+   box-sizing: border-box;
+   letter-spacing: .5px;
+
+}
+nav #checkbox{
+    visibility: hidden;
+}
+body{
+    margin-top: 70px;
+    max-width: 100%;
+    font-family: var(--font-family);
+}
+nav{
+
+    position:fixed;
+    z-index: 3;
+    background: var(--primary-color);
+    height: 70px;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+nav label.logo{
+    color:black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 75px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height:80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    position: relative;
+    color: black;
+    transition: .2s;
+    padding: 7px 13px;
+    font-size:17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+ }
+ nav ul li a::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+transition: .2s ease-in;
+animation: underline-thing-idle .2s ease;
+
+ }
+
+nav .hovered::after{
+    animation: underline-thing .5s ease-in forwards;
+}
+.active::after{
+    animation: underline-thing .5s ease-in forwards;
+
+}
+nav .checkbtn{
+    font-size: 30px;
+    color: black;
+    line-height: 80px;
+    float: right;
+    margin-right: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+@media  (max-width:952px){
+    nav label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media  (max-width:858px){
+    nav .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top:80px;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        transform: translate();
+        padding: 5vh 40% 5vh 40%;
+    }
+    nav ul li a:hover{
+        font-size: 18px;
+transition: .2s ease-in;
+background-color: #242d37;
+    }
+}
+
+#checkbox:checked ~ ul{
+    left:0;
+}
+/* FOOTER */
+
+
+
+footer{
+    background-color:#151515;
+    width: 100%;
+    padding: 0px;
+    color:#fff;
+
+}
+
+footer .faq h1{
+padding: 45px 40px 0 40px;
+letter-spacing: -2.2px; 
+font-size: var(--font-size-x-large);
+}
+footer .feqsi{
+    position: relative;
+    max-width: 1000px;
+    margin:20px 50px;
+}
+footer .faq div p{
+    display: inline-block;
+    color: #646464;
+    letter-spacing: -2.2px;
+    font-size: var(--font-size-large);
+}
+
+footer .faq div span{
+    position: absolute;
+    right: 10px;
+    margin: -8px 0;
+    color: #646464;
+    font-size: 50px;
+    text-align: right;
+
+}
+
+
+
+footer .list{
+    transition: .25s ease-in;
+    
+}
+footer .list:hover{
+    cursor: pointer;
+    transition: .25s ease-in;
+    color: #999 !important;
+
+}
+footer .faq .tex{
+    font-size: var(--font-size-small);
+    margin: 20px 50px 20px 0;
+    transition: .5s ease-in forwards;
+    display:none;
+}
+footer .faq .visible{
+    display:flex !important;
+    margin: -50px 0 0 0;
+    animation:margin-to-twenty .5s forwards;
+}
+footer .faq .dissapear{
+    animation:margin-from-twenty 1s forwards;
+}
+footer .faq .tex{
+    max-width: 800px;
+}
+footer .faq .hovered p,footer .faq .hovered span{
+    transition: 0.5s;
+    color: white;
+}
+footer .faq .white p,footer .faq .white span{
+    transition: 0.5s;
+    color: white;
+}
+
+/* CONTACT US */
+footer .contact-us{
+    display: block;
+    margin: 50px;
+    max-width:200px;
+    padding: 15px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 25px;
+    font-size: var(--font-size-mid);
+    border: 2px solid white;
+    transition: .25s ease-in-out;
+}
+footer .contact-us:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+footer .lets-work-together  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+/* MAPA */
+footer .mapa iframe{
+    max-width:60% ;
+    max-height: 300px;
+    margin: 0 35px;
+}
+/* NAME AND STUFF */
+footer .name-and-stuff{
+    margin: -10px 0 0 0;
+    max-height: 300px;
+
+    
+}
+footer .name-and-stuff input{
+    position: relative;
+background-color: transparent;
+outline: none;
+width: 400px;
+color: white;
+border:none;
+border-bottom:2px solid #888888;
+margin:0 0 15px 0;
+font-size: var(--font-size-mid);
+transition: forwards;
+}
+
+footer button:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+footer .name-and-stuff input::after{
+position: absolute;
+top: 0;
+left: 0;
+content: '';
+width: 20px;
+background-color: white;
+height: 2px;
+}
+
+footer button{
+    color: white;
+    background-color: transparent;
+    display: block;
+    width:180px;
+    padding: 12px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 25px;
+    font-size: var(--font-size-mid);
+    border: 2px solid white;
+    transition: .25s ease-in-out ;
+}
+
+footer .name-and-stuff textarea{
+    background-color: transparent;
+    outline: none;
+    max-height: 150px;
+    width: 400px;
+    border:none;
+    border-bottom:2px solid #888;
+    margin:0 0 15px 0;
+    font-size: var(--font-size-mid);
+    color: white;
+    }
+    footer .name-and-stuff input:focus~footer .name-and-stuff input::placeholder{
+        color: red;
+    }
+
+    footer .name-and-stuff textarea::placeholder,footer .name-and-stuff input::placeholder{
+        color: white;
+    }
+    footer .name-and-stuff textarea:hover,footer .name-and-stuff input:hover{
+    transition: .5s ;
+    border-color: white;
+    }
+
+
+    /* THE REAL FOOTER */
+    footer{
+        position: relative;
+    }
+    footer .footer {
+        border-top: 2px solid #888;
+        margin: 100px 20px 0 0 ;
+        display: flex;
+        justify-content: space-around;
+        align-content: bottom;
+        min-height: 200px;
+    }
+    footer .footer .uli ul li{
+        display: inline-block;
+        line-height: 50px;
+        margin-top: 75px;
+        font-size: var(--font-size-mid);
+
+    }
+    footer .footer .uli ul li a{
+        color: white;
+        padding: 20px 20px 0 0   ;
+        position: relative;
+
+    }
+    footer .footer .uli ul li a::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+    }
+    footer .footer .your-street{
+        margin-top: 40px;
+    }
+
+    footer .footer .fbi{
+        position: absolute;
+        bottom: 20px;
+        left: 250px;
+    }
+    footer .footer .fbi a{
+        margin:100px;
+
+    }
+    
+    
+
+
+/* KEYFRAMES */
+@keyframes underline-thing {
+    0% {
+         width: 0%;
+     }
+     100%{
+         width: 100%;
+     }
+ }
+ @keyframes underline-thing-idle{
+     0%{
+         width:100%
+     }
+     100%{
+         width:0%
+     }
+ }
+@keyframes margin-to-twenty{
+    0%{
+        opacity: 50%;
+        margin: -20px 0 0 0;
+    }
+    100%{
+        opacity: 100%;
+        margin: 10px 0 0 0;
+    }
+}
+@keyframes margin-from-twenty{
+    0%{
+        opacity: 100%;
+        margin: 10px 0 0 0;
+    }
+    100%{
+        opacity: 0%;
+        margin: -50px 0 0 0;
+    }
+}
+
+
+
+/* MEDIA */
+@media screen and (max-width:925px) {   
+    footer .lets-work-together {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer .lets-work-together .mapa{
+        margin: 10px;
+    } 
+    footer .lets-work-together .name-and-stuff{
+        margin: 10px;
+    }
+    footer .feqsi span{
+        display: none;
+    }
+    footer .footer .fbi{
+    position: absolute  ;
+    bottom: 10px;
+    left: 20px;
+    margin: 0;
+    }
+    }
+@media screen and (max-width:500px) {
+    nav .logo{
+        font-size: 20px !important;
+        margin: -5px;
+    }
+}   
