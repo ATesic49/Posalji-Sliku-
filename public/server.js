@@ -10,18 +10,30 @@ a.addEventListener('mouseleave',()=>{
 
 const pitanja = document.querySelectorAll('.pitanja')
 const tex = document.querySelectorAll('.tex')
-
+const span = document.querySelectorAll('.pitanja span')
  for (let i = 0; i < pitanja.length; i++) {
 
+
+
+
     pitanja[i].addEventListener('click',()=>{
+
+
+
+        console.log(span[i].innerHTML)
+        if (span[i].innerHTML==='+'){
+            span[i].innerHTML='-'
+        }else{
+            span[i].innerHTML='+'
+        }
+
         pitanja[i].classList.toggle('white')
        if (tex[i].classList.value==='tex visible' || tex[i].classList.value==='tex dissapear visible' ){
-        console.log('a')
         tex[i].classList.toggle('dissapear')
 
         setTimeout(() => {
         tex[i].classList.toggle('visible')
-    }, 500);
+    }, 1000);
         
        }else{
         tex[i].classList.toggle('visible')

@@ -43,6 +43,11 @@ app.post('/sendEmail',(req,res)=>{
             console.log(info)
         }
     })
+    res.render('mailSent',{
+        subject:req.body.imezagmail,
+        email:req.body.gmailzagmail,
+        text:req.body.porukazagmail
+    })
 })
 
 

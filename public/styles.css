@@ -119,7 +119,6 @@ nav .checkbtn{
         display: block;
     }
     nav ul li a{
-        transform: translate();
         padding: 5vh 40% 5vh 40%;
     }
     nav ul li a:hover{
@@ -184,18 +183,17 @@ footer .list:hover{
 
 }
 footer .faq .tex{
-    font-size: var(--font-size-small);
-    margin: 20px 50px 20px 0;
+    font-size: 16px;
+    font-weight: 200;
     transition: .5s ease-in forwards;
     display:none;
 }
 footer .faq .visible{
     display:flex !important;
-    margin: -50px 0 0 0;
-    animation:margin-to-twenty .5s forwards;
+    animation:margin-to-twenty .25s ease-in forwards;
 }
 footer .faq .dissapear{
-    animation:margin-from-twenty 1s forwards;
+    animation:margin-from-twenty .25s ease-in forwards;
 }
 footer .faq .tex{
     max-width: 800px;
@@ -247,7 +245,7 @@ footer .name-and-stuff{
     
 }
 footer .name-and-stuff input{
-    position: relative;
+position: relative;
 background-color: transparent;
 outline: none;
 width: 400px;
@@ -290,6 +288,7 @@ footer button{
 }
 
 footer .name-and-stuff textarea{
+    resize: none;
     background-color: transparent;
     outline: none;
     max-height: 150px;
@@ -300,10 +299,6 @@ footer .name-and-stuff textarea{
     font-size: var(--font-size-mid);
     color: white;
     }
-    footer .name-and-stuff input:focus~footer .name-and-stuff input::placeholder{
-        color: red;
-    }
-
     footer .name-and-stuff textarea::placeholder,footer .name-and-stuff input::placeholder{
         color: white;
     }
@@ -382,22 +377,31 @@ footer .name-and-stuff textarea{
  }
 @keyframes margin-to-twenty{
     0%{
-        opacity: 50%;
-        margin: -20px 0 0 0;
+        opacity: 0%;
+        top: 0;
+        margin: -12.3px 0 ;
     }
     100%{
         opacity: 100%;
-        margin: 10px 0 0 0;
+        top: 100%;
+        margin: 15px 0;
     }
 }
 @keyframes margin-from-twenty{
     0%{
         opacity: 100%;
-        margin: 10px 0 0 0;
+        top: 0%;
+        margin: 15px 0;
+       
+    }
+    75%{
+        opacity:0.001%;
     }
     100%{
-        opacity: 0%;
-        margin: -50px 0 0 0;
+        opacity: 0;
+        margin:-12.3px 0;
+        top: 100%;
+        
     }
 }
 

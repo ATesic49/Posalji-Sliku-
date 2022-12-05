@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mailSent.css">
 </head>
 <body>
-    Subject: <h1><%=locals.subject %> </h1>
-    Email: <h1><%=locals.email %> </h1>
-    Text: <h1><%=locals.text %> </h1>
-    Proverite email: <a href="<%= locals.email %> "></a>
+    <div class="container">
+        <div class="slika">
+            <div class="oblastnaslici">
+                <div class="text"><h1>Hvala Vam na saradjivanju!</h1></div>
+                Subject: <p><%=locals.subject %></p>
+                Email: <p><%=locals.email %> </p>
+                Text: <p><%=locals.text %> </p>            
+            </div>
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> Posetite vas gmail</a>
+        </div>
+    </div>
+ 
 </body>
 </html>

@@ -1,0 +1,53 @@
+footer{
+    display: none;
+}
+
+
+.container{
+    width: 100%;
+    min-height:300px ;
+    /* margin-top: 200px; */
+    margin-bottom: -50px;
+}
+.container .slika{
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    position: relative;
+    background-image:url(./imagesForSite/people-on-beach.jpg);
+
+}
+.container .oblastnaslici{
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+}
+.container .slika .text{
+    color:white;
+}
+.container .slika  p{
+   color: white; 
+}
+.container .slika a{
+    position: absolute;
+    width:200px;
+    border: 2px solid black;
+    padding:10px 5px;
+    background: transparent;
+    transition: .25s;
+    border-radius: 20px;
+    bottom: 20%;
+    right:30%;
+    text-align: center;
+    color: black;
+    text-transform: capitalize;
+    background-color: white;
+
+}
+.container a:hover{
+    background-color: black;
+    color: white;
+}

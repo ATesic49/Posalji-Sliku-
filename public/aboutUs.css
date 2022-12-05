@@ -17,7 +17,7 @@
     font-size: var(--font-size-x-large);
 }
 #about .prvi .donji-deo{
-    background-image: url(./images/Sam-and-Milly-Wedding-905-scaled.jpg);
+    background-image: url(./imagesForSite/pexels-pixabay-414102.jpg);
     position: relative;
     min-height: 800px;
     background-size:cover;
@@ -67,7 +67,7 @@
     text-align:center;
     font-weight: 600;
 }
-#about .treci .text span{
+ span{
     color: #646464;
 }
 
