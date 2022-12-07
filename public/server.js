@@ -17,7 +17,7 @@ const span = document.querySelectorAll('.pitanja span')
 
 
     pitanja[i].addEventListener('click',()=>{
-
+        
 
 
         console.log(span[i].innerHTML)
@@ -33,7 +33,7 @@ const span = document.querySelectorAll('.pitanja span')
 
         setTimeout(() => {
         tex[i].classList.toggle('visible')
-    }, 1000);
+    }, 250);
         
        }else{
         tex[i].classList.toggle('visible')
@@ -43,6 +43,7 @@ const span = document.querySelectorAll('.pitanja span')
        }
     })  
  }
+
 pitanja.forEach(pitanje=>{
     pitanje.addEventListener('mouseover',()=>{
         pitanje.classList.add('hovered')
@@ -51,3 +52,4 @@ pitanja.forEach(pitanje=>{
         pitanje.classList.remove('hovered')
     })
 })
+

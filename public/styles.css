@@ -183,21 +183,24 @@ footer .list:hover{
 
 }
 footer .faq .tex{
+    opacity: 1;
     font-size: 16px;
     font-weight: 200;
-    transition: .5s ease-in forwards;
+    max-height:0;
+    overflow: hidden;
+    transition: max-height .5s ease-in;
     display:none;
 }
 footer .faq .visible{
-    display:flex !important;
+    display:block !important;
+    transition: .25s;
     animation:margin-to-twenty .25s ease-in forwards;
 }
 footer .faq .dissapear{
+    transition: .25s;
     animation:margin-from-twenty .25s ease-in forwards;
 }
-footer .faq .tex{
-    max-width: 800px;
-}
+
 footer .faq .hovered p,footer .faq .hovered span{
     transition: 0.5s;
     color: white;
@@ -375,35 +378,6 @@ footer .name-and-stuff textarea{
          width:0%
      }
  }
-@keyframes margin-to-twenty{
-    0%{
-        opacity: 0%;
-        top: 0;
-        margin: -12.3px 0 ;
-    }
-    100%{
-        opacity: 100%;
-        top: 100%;
-        margin: 15px 0;
-    }
-}
-@keyframes margin-from-twenty{
-    0%{
-        opacity: 100%;
-        top: 0%;
-        margin: 15px 0;
-       
-    }
-    75%{
-        opacity:0.001%;
-    }
-    100%{
-        opacity: 0;
-        margin:-12.3px 0;
-        top: 100%;
-        
-    }
-}
 
 
 
