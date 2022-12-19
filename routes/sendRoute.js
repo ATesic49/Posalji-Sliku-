@@ -39,7 +39,7 @@ let error
 router.get('/',(req,res)=>{
     res.render('sendPage',{
         error:error,
-        valueForEmail:'atesic7@gmail.com',
+        valueForEmail:req.body.sendersGmail,
     })
 })
 
@@ -60,7 +60,9 @@ console.log(attachments)
         from:'aleksasmailsender@gmail.com',
         to:req.body.sendersGmail,
         subject:'Slike Za Stampanje',
-        text:`Broj Kopija:${req.body.numberOfCopies}`,
+        text:`Broj Kopija:${req.body.numberOfCopies};
+        Adresa:${req.body.VasaUlica},${req.body.opstinaStanovanja};
+        Broj Tel.:${req.body.brojTel}`,
         attachments:attachments
     }
 

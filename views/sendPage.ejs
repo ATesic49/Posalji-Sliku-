@@ -5,24 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer> 
-        const link=document.querySelectorAll(".nav a")
-        console.log(link)
-        link[3].classList.add('active')
-        </script>
-        <link rel="stylesheet" href="aboutUs.css">
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+    
+
+    <script defer src="sendPage.js"> 
+    </script>
+
+      
+        <link rel="stylesheet" href="sendPage.css">
 </head>
 <body>
-    <body>
+    <div id="text"><h1>Naruci.</h1></div>
+<div class="container">
+    <div class="img">
+        <div class="text">
+            <h2>Cestitamo! Na korak ste od <span> Vase</span> omiljene slike</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit. Est eligendi explicabo at, et perferendis <br> aperiam doloribus, beatae soluta!</p>
+        </div>
+    </div>
+
+
+    <div class="forma">
+      <div class="u-formi">
+        <h1 style="font-size: var(--font-size-large); margin-bottom: 40px;">Unesite Vase podatke</h1>  
+
+
+
         <h1 style="color: red;"><%= locals.error %> </h1>
         <form action="/send" method="post" enctype="multipart/form-data">
-            <label for="images">Input your image</label>
-            <input type="file" name="images" multiple required>
-            <input type="email"   pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" required value="<%= locals.valueForEmail %>" name="sendersGmail" >
-            <input type="number" name="numberOfCopies" value=<%= locals.valueForNumber || 1 %>  min="1">
-            <input type="submit" value="submit">
+           
+            
+            <div> Unesite Vas E-mail:
+               <input type="email"   pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" required value="<%= locals.valueForEmail %>" name="sendersGmail" placeholder="petar.petrovic@gmail.com" >
+            </div>
+            <div> 
+
+                
+            <div>
+            </div>
+        
+
+            <div> <label for="opstinaStanovanja"> Unesite Vasu opstinu</label>     
+                   <input list="opstine" name="opstinaStanovanja" placeholder="Vračar">
+                <datalist id="opstine">
+                    <option value="Novi Beograd"></option>
+                    <option value="Palilula"></option>
+                    <option value="Savski venac"></option>
+                    <option value="Stari grad"></option>
+                    <option value="Voždovac"></option>
+                    <option value="Vračar"></option>
+                    <option value="Zemun"></option>
+                    <option value="Zvezdara"></option>
+                </datalist></div>
+
+            <div><label for="VasaUlica">
+                Vasa Adresa:
+                <input type="text" id="VasaUlica" name="VasaUlica" placeholder="Bulevar Kralja Aleksandra 1">
+            </label></div>
+            <label for="brojTel">Broj Telefona
+                <input type="tel" name="brojTel" id="brojTel" onkeydown="testTelefona()" value="+381" placeholder="+381-12-456-7890">
+            </label>
+              <div class="naruciSliku">NARUCI SLIKU</div>
+               <div class="naruci-cena">
+                <div style="
+                margin:10px 20px;
+                display: flex;
+                justify-content: center;">
+                    <label for="images" >
+                       Unesite Vase slike:
+                <input type="file" name="images" multiple required id="images">
+                </label>
+                
+                </div>
+
+               <div style="
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               " >
+                <label for="numberOfCopies"> Broj Kopija:
+                    <input style="width:75px" id="brKop" type="number" min="1" id="numberOfCopies" name="numberOfCopies" value= <%= locals.valueForNumber || 1 %> </div>
+                </label>
+                
+
+               </div>
+               <div>
+                <p style="font-weight: 600;">Cena: <span style="color: green;" id="cena">&nbsp;0</span> dinara</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+               
+               </div>
+
+            <input type="submit" value="Submit" style="cursor: pointer;">
     
+
         </form>
+        
+
+
+
+
+      </div>
+    </div>
+
+</div>
+
+
 
 
 </body>

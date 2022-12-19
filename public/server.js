@@ -20,27 +20,24 @@ const span = document.querySelectorAll('.pitanja span')
         
 
 
-        console.log(span[i].innerHTML)
-        if (span[i].innerHTML==='+'){
-            span[i].innerHTML='-'
-        }else{
-            span[i].innerHTML='+'
-        }
+         if (span[i].innerHTML==='+'){
+             span[i].innerHTML='-'
+         }else{
+             span[i].innerHTML='+'
+         }
+         if (tex[i].style.display === 'block'){
+            setTimeout(()=>{
+                tex[i].style.display = 'none'
 
-        pitanja[i].classList.toggle('white')
-       if (tex[i].classList.value==='tex visible' || tex[i].classList.value==='tex dissapear visible' ){
-        tex[i].classList.toggle('dissapear')
-
-        setTimeout(() => {
-        tex[i].classList.toggle('visible')
-    }, 250);
-        
-       }else{
-        tex[i].classList.toggle('visible')
-        tex[i].classList.remove('dissapear')
-
-
-       }
+            },250)
+         } else{
+            tex[i].style.display = 'block'
+         }
+         if (tex[i].style.maxHeight){
+            tex[i].style.maxHeight = null
+         } else{
+            tex[i].style.maxHeight = tex[i].scrollHeight + 'px'
+         }
     })  
  }
 

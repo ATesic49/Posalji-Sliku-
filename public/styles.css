@@ -2,7 +2,6 @@
 
 
 *{
-    
     --font-size-small:13px;
     --font-size-mid:20px;
     --font-size-large:36px;
@@ -177,6 +176,7 @@ footer .list{
     
 }
 footer .list:hover{
+    user-select: none;
     cursor: pointer;
     transition: .25s ease-in;
     color: #999 !important;
@@ -186,20 +186,12 @@ footer .faq .tex{
     opacity: 1;
     font-size: 16px;
     font-weight: 200;
-    max-height:0;
     overflow: hidden;
-    transition: max-height .5s ease-in;
+    max-height: 0;
+    transition: max-height .25s ease-out;
     display:none;
 }
-footer .faq .visible{
-    display:block !important;
-    transition: .25s;
-    animation:margin-to-twenty .25s ease-in forwards;
-}
-footer .faq .dissapear{
-    transition: .25s;
-    animation:margin-from-twenty .25s ease-in forwards;
-}
+
 
 footer .faq .hovered p,footer .faq .hovered span{
     transition: 0.5s;
@@ -396,7 +388,7 @@ footer .name-and-stuff textarea{
     }
     footer .feqsi span{
         display: none;
-    }
+    } 
     footer .footer .fbi{
     position: absolute  ;
     bottom: 10px;
