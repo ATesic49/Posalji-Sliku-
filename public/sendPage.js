@@ -31,8 +31,14 @@
         })
 
 
-        const naruciCena = querySelector('.naruci-cena')
-        const naruciSliku = querySelector('.naruciSliku')
+        const naruciCena = document.querySelector('.naruci-cena')
+        const naruciSliku = document.querySelector('.naruciSliku')
+        const iskljuciSliku = document.querySelector('.iskljuciSliku')
         naruciSliku.addEventListener('click',()=>{  
-            alert('j')
+            naruciCena.classList.add('flex')
         })
+        iskljuciSliku.addEventListener('click', ()=>{
+          
+            naruciCena.classList.remove('flex')
+        })
+        console.log(naruciSliku)

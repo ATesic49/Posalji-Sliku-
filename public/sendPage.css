@@ -49,13 +49,14 @@ left: 0;
 
 
 .container .forma{
+    
     z-index: 1;
     display: flex;
     flex-direction: row;
     height: 110vh;
     width: 25%;
     min-width:250px;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     background-color: rgb(240, 240, 240);
 }
@@ -85,7 +86,13 @@ left: 0;
         justify-content: center;
         align-items: center;
     }
-
+    .container .forma input{
+        width: 400px;
+    }
+    .container .forma .naruciSliku{
+        width: 400px;
+        letter-spacing:2px ;
+    }
 }   
 .naruci-cena{
     display: none;
@@ -93,8 +100,8 @@ left: 0;
     align-items: center;
     justify-content: space-around;
     z-index: 2;
-    width: 50%;
-    height: 50vh;
+    width: 40%;
+    height: 60vh;
     background-color: rgb(240, 240, 240);
     position: fixed;
     top: 50%;
@@ -103,17 +110,36 @@ left: 0;
     border-radius: 50px;
     border: 1px solid black;
 }
+.naruci-cena input{
+    width: 200px !important;
+}
 .flex{
     display: flex !important;
 }
 .naruciSliku{
+transition: .5s;
 padding: 10px;
+margin: 5px auto;
+outline: none;
+width: 200px;
+border-radius: 0;
+border: 1px #646464 solid;
+border-radius: 20px;
+background-color: rgb(220,220,220);
+cursor: pointer;
+}
+.iskljuciSliku{
+    padding: 10px;
 margin: 5px auto;
 outline: none;
 width: 200px;
 border-radius: 0;
 border: 0px #646464 solid;
 border-radius: 20px;
-background-color: rgb(77, 110, 210);
+background-color: rgb(111, 111, 111);
 cursor: pointer;
+}
+#brKop{
+    width: 70px !important;
+    text-align: center;
 }

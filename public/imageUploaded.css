@@ -1,0 +1,19 @@
+.slika{
+    display: inline-block;
+}
+.imejl{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.imejl a{
+    padding: 10px;
+    margin: 5px 20px;
+    outline: none;
+    width: 200px;
+    border-radius: 0;
+    border: 1px #646464 solid;
+    text-align: center;
+    color: black;
+}

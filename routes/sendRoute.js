@@ -4,6 +4,7 @@ const multer = require('multer');
 const nodemailer  = require('nodemailer');
 const mongoose  = require('mongoose'); 
 const path = require('path');
+const fs = require('fs');
 router.use(express.static('public'))
 
 
@@ -62,10 +63,10 @@ console.log(attachments)
         subject:'Slike Za Stampanje',
         text:`Broj Kopija:${req.body.numberOfCopies};
         Adresa:${req.body.VasaUlica},${req.body.opstinaStanovanja};
-        Broj Tel.:${req.body.brojTel}`,
+        Broj Tel.:${req.body.brojTel}
+        Cena:${req.body.numberOfCopies*20*req.files.length}dinara`,
         attachments:attachments
     }
-
 
     transporter.sendMail(mailOptions,(err,info)=>{
         if (err) {
@@ -74,9 +75,6 @@ console.log(attachments)
             console.log(info)
         }
     });
-
-
-
 
 
 
