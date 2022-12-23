@@ -35,11 +35,11 @@ nav{
     right: 0;
 }
 
-nav label.logo{
+nav .logo{
     color:black;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 75px;
+    padding: 0 5px;
     font-weight: bold;
 }
 
@@ -244,6 +244,7 @@ position: relative;
 background-color: transparent;
 outline: none;
 width: 400px;
+max-width: 80%;
 color: white;
 border:none;
 border-bottom:2px solid #888888;
@@ -288,6 +289,7 @@ footer .name-and-stuff textarea{
     outline: none;
     max-height: 150px;
     width: 400px;
+    max-width: 80%;
     border:none;
     border-bottom:2px solid #888;
     margin:0 0 15px 0;
@@ -399,6 +401,8 @@ footer .name-and-stuff textarea{
 @media screen and (max-width:500px) {
     nav .logo{
         font-size: 20px !important;
-        margin: -5px;
+       position: fixed;
+       top: 0px;
+       left: -50px;
     }
 }   

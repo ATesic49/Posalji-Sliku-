@@ -34,11 +34,18 @@
         const naruciCena = document.querySelector('.naruci-cena')
         const naruciSliku = document.querySelector('.naruciSliku')
         const iskljuciSliku = document.querySelector('.iskljuciSliku')
+        const container = document.querySelector('.container')
+        const containerAfter = window.getComputedStyle(container,'::after')
         naruciSliku.addEventListener('click',()=>{  
             naruciCena.classList.add('flex')
+            container.style.setProperty('--displayAfter-','flex')
+        console.log(containerAfter.display)
+
         })
         iskljuciSliku.addEventListener('click', ()=>{
-          
+            
             naruciCena.classList.remove('flex')
+            container.style.setProperty('--displayAfter-','none')
+
         })
         console.log(naruciSliku)

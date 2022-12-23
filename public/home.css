@@ -4,13 +4,12 @@
     }
     #home .prvi {
         height: 400px;
-        max-height: 450px;
         background-color: white;
         color: black;
         display:flex ;
         align-items:flex-end;
         justify-content: left;
-        margin: 0 0 100px 180px;
+        margin: 0 0 min(100px,5vh) 20%;
     }
     #home .prvi h2{
         font-size:var(--font-size-x-large);
@@ -89,7 +88,6 @@
         margin: 0;
         padding: 150px 0;
         height:1150px;
-        max-height: 1200px;
         background-color: rgba(202, 202, 202, 0.632);
         display: flex;
         flex-direction: column;
@@ -134,11 +132,11 @@
     #home .cetvrto{
         background-color: rgb(15, 15, 15);
         margin: 0;
-        padding: 100px 0;
+        padding: 40px 0;
         display: flex;
         flex-direction: column;
         min-height:800px;
-        
+        margin: 120px 0px;
     }
     #home .cetvrto .cetvrtoa{
         text-align: center;
@@ -148,7 +146,7 @@
        
     }
     #home .cetvrto .cetvrtoa .heading{
-        min-width:400px ;
+        max-width:90% ;
         margin:0 10%;
     
     }
@@ -160,7 +158,7 @@
     }
     #home .cetvrto .cetvrtoa .text4{
         margin: 0 10% 0 0;
-        max-height: 100px;
+        min-height: 100px;
     }
     
     #home .cetvrto .cetvrtob{
@@ -172,6 +170,7 @@
     #home .cetvrto .cetvrtob .boxholder{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
     
@@ -280,11 +279,7 @@ justify-content: space-around;
     display: flex;
     flex-direction: column;
 }
-#home .cetvrto{
-    max-height: 2400px;
 
-    
-}
 
 
 #home .cetvrtoa{
@@ -307,5 +302,9 @@ justify-content: space-around;
 
 
 }
-    
+@media screen and (max-width:400px){
+    #home .prvi .container h2{
+        font-size: 20px;
+    }
+} 
     

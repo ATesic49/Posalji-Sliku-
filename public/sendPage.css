@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     flex-wrap: wrap;
+    --displayAfter-:none;
+
+}
+.container::after{
+
+position: fixed;
+display: var(--displayAfter-);
+width: 1000%;
+height: 1020vh;
+transform:translateY(-35%);
+z-index: 4;
+content: '';
+background-color: rgb(0, 0, 0);
+opacity: .4;
 }
 footer{
     display: none;
@@ -48,9 +62,7 @@ left: 0;
 }
 
 
-.container .forma{
-    
-    z-index: 1;
+.container .forma{  
     display: flex;
     flex-direction: row;
     height: 110vh;
@@ -65,6 +77,7 @@ left: 0;
     margin: 5px 20px;
     outline: none;
     width: 200px;
+    max-width: 400px;
     border-radius: 0;
     border: 1px #646464 solid;
 }
@@ -75,33 +88,14 @@ left: 0;
     margin-top: 100px;
     margin-left:100px ;
 }
-@media screen and (max-width:1020px) {
-    nav .logo{
-        font-size: 20px !important;
-        margin: -5px;
-    }
-    .container .img,.container .forma{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .container .forma input{
-        width: 400px;
-    }
-    .container .forma .naruciSliku{
-        width: 400px;
-        letter-spacing:2px ;
-    }
-}   
+
 .naruci-cena{
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    z-index: 2;
-    width: 40%;
-    height: 60vh;
+    width: 80%;
+    max-width:600px ;
     background-color: rgb(240, 240, 240);
     position: fixed;
     top: 50%;
@@ -109,15 +103,20 @@ left: 0;
     transform: translate(50%,-50%);
     border-radius: 50px;
     border: 1px solid black;
+    height: 60vh;
 }
 .naruci-cena input{
-    width: 200px !important;
+   
+    max-width: calc(200px);
 }
 .flex{
     display: flex !important;
+    z-index: 5 !important;
+
 }
+
 .naruciSliku{
-transition: .5s;
+    transition: .5s;
 padding: 10px;
 margin: 5px auto;
 outline: none;
@@ -128,18 +127,77 @@ border-radius: 20px;
 background-color: rgb(220,220,220);
 cursor: pointer;
 }
+.naruciSliku:hover{
+
+    background-color: rgb(111, 111, 111);
+}
 .iskljuciSliku{
-    padding: 10px;
+transition: .5s;
+padding: 10px;
 margin: 5px auto;
 outline: none;
 width: 200px;
 border-radius: 0;
 border: 0px #646464 solid;
 border-radius: 20px;
-background-color: rgb(111, 111, 111);
+background-color: rgb(220, 220,220);
 cursor: pointer;
+}
+.iskljuciSliku:hover{
+    background-color: rgb(111, 111, 111);
 }
 #brKop{
     width: 70px !important;
     text-align: center;
+}
+
+#images{
+    display: none;
+}
+label[for="images"]{
+    transition: 0.5s;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    min-height: 10%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px #646464 solid;
+    border-radius: 20px;
+background-color: rgb(220, 220,220);
+transition: .5;
+}
+label[for="images"]:hover{
+    background-color: rgb(111, 111, 111);
+}
+
+
+
+@media screen and (max-width:1020px) {
+    nav .logo{
+        font-size: 20px !important;
+        margin: -5px;
+        padding: 0 5px;
+    }
+    .container .img,.container .forma{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .forma input{
+      width: 80%;
+    }
+    .container .forma .naruciSliku{
+        max-width: 500px;
+        letter-spacing:1px ;
+    }
+    
+}   
+@media screen and (max-width:600px) {
+.naruci-cena{
+    height: 300px;
+}
 }
