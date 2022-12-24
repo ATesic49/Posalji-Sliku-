@@ -7,6 +7,7 @@ const app =express()
 const expressLayouts = require("express-ejs-layouts")
 const homeRoute= require('./routes/homeRoute')
 const abotUsRoute = require('./routes/aboutUsRoute');
+const uslugeRoute = require('./routes/naruciRoute');
 const bodyParser = require('body-parser');
 const sendRoute = require('./routes/sendRoute');
 const nodemailer = require('nodemailer');
@@ -20,6 +21,8 @@ app.use(express.static('public'))
 app.use('/',homeRoute)
 app.use('/about-us',abotUsRoute)
 app.use('/send',sendRoute)
+app.use('/usluge',uslugeRoute)
+
 
 const transporter = nodemailer.createTransport({
     service:'gmail',

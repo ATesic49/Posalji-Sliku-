@@ -134,6 +134,7 @@
         margin: 0;
         padding: 40px 0;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         min-height:800px;
         margin: 0 0 120px 0px;
@@ -147,7 +148,7 @@
     }
     #home .cetvrto .cetvrtoa .heading{
         max-width:90% ;
-        margin:0 10%;
+        margin:0 5%;
     
     }
     #home .cetvrto .cetvrtoa .heading h2{
@@ -159,6 +160,11 @@
     #home .cetvrto .cetvrtoa .text4{
         margin: 0 10% 0 0;
         min-height: 100px;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     #home .cetvrto .cetvrtob{
