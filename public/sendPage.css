@@ -200,4 +200,7 @@ label[for="images"]:hover{
 .naruci-cena{
     height: 300px;
 }
+.img .text{
+    font-size:var(--font-size-small);
+}
 }

@@ -9,7 +9,7 @@
         display:flex ;
         align-items:flex-end;
         justify-content: left;
-        margin: 0 0 min(100px,5vh) 20%;
+        margin: 0 0 min(100px,5vh) 10%;
     }
     #home .prvi h2{
         font-size:var(--font-size-x-large);
@@ -136,7 +136,7 @@
         display: flex;
         flex-direction: column;
         min-height:800px;
-        margin: 120px 0px;
+        margin: 0 0 120px 0px;
     }
     #home .cetvrto .cetvrtoa{
         text-align: center;

@@ -1,20 +1,7 @@
-  const link=document.querySelectorAll(".nav a")
-        console.log(link)
-        link[3].classList.add('active')
 
-        function testTelefona(){
-        const inputTel = document.querySelector('#brojTel')
-            console.log(inputTel.value)
-            if (!inputTel.value) return inputTel.value
-            else{
-                console.log(inputTel.value.lenght)
-            }
-            // if(inputTel.value.lenght < 3) return inputTel.value
-            // if(inputTel.avlue.lenght < 7) {
-            //     inputTel.value = `inputTel.value.slice(0,3)`
-            // }
-        }
-        
+  const link=document.querySelectorAll(".nav a")
+        link[2].classList.add('active')
+
 
 
         const inputFiles = document.querySelector("#images")
@@ -39,7 +26,6 @@
         naruciSliku.addEventListener('click',()=>{  
             naruciCena.classList.add('flex')
             container.style.setProperty('--displayAfter-','flex')
-        console.log(containerAfter.display)
 
         })
         iskljuciSliku.addEventListener('click', ()=>{
@@ -48,4 +34,68 @@
             container.style.setProperty('--displayAfter-','none')
 
         })
-        console.log(naruciSliku)
+
+
+        let inputTel = document.querySelector('#brojTel')
+        let inputTelValue = inputTel.value
+        setInterval(()=>{
+            if (inputTel.value.replace(/[^\d]/g,'').length<4){
+                inputTelValue = `+381`
+                return inputTel.value = inputTelValue
+            }
+        },5)
+        
+inputTel.addEventListener('keydown',(p)=>{
+    let inputTel = document.querySelector('#brojTel')
+    let inputTelValue = inputTel.value
+    inputTel.value = inputTelValue
+    const phoneNumber = inputTel.value.replace(/[^\d]/g,'')
+    if (p.key === 'Backspace'){
+        return null
+    }
+    if (!inputTelValue) return inputTel.value = inputTelValue
+    if (phoneNumber.length<3){
+        inputTelValue = `(+${phoneNumber.slice(0,3)})`
+
+        return inputTel.value = inputTelValue
+    }
+    if(phoneNumber.length<5){
+
+        inputTelValue = `(+${phoneNumber.slice(0,3)})-${phoneNumber.slice(3,5)}`
+        return inputTel.value = inputTelValue
+    }
+    if(phoneNumber.length<8){
+        inputTelValue = `(+${phoneNumber.slice(0,3)})-${phoneNumber.slice(3,5)}-${phoneNumber.slice(5,8)}`
+        return inputTel.value = inputTelValue
+    }
+    if(phoneNumber.length<11){
+        inputTelValue = `(+${phoneNumber.slice(0,3)})-${phoneNumber.slice(3,5)}-${phoneNumber.slice(5,8)}-${phoneNumber.slice(8,10)}`
+        return inputTel.value = inputTelValue
+}
+if(phoneNumber.length<13){
+    inputTelValue = `(+${phoneNumber.slice(0,3)})-${phoneNumber.slice(3,5)}-${phoneNumber.slice(5,8)}-${phoneNumber.slice(8,10)}-${phoneNumber.slice(10,12)}`
+    return inputTel.value = inputTelValue
+}
+
+
+
+})
+     
+
+        
+         
+
+            
+
+    //     function formatPhoneNumber(parametar){
+    //         if (!parametar) return parametar
+    //         const phoneNumber = parametar.replace(/[^\d]/g,'')
+    //         const phoneNumberLength = phoneNumber.length
+    //         if(phoneNumberLength <4) return phoneNumber
+    //         if (phoneNumberLength<7) {
+    //             return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`
+    //     } else{
+    //         return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3,6)} ${phoneNumber.slice(6)}`
+    //     }
+        
+    // }

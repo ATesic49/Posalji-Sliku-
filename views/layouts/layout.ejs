@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odstampaj mi sliku</title>
+    <title>Odštampaj mi sliku</title>
     <link rel="stylesheet" href='styles.css'>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
     <script src="server.js" defer enctype="multipart/form-data"></script>
@@ -14,27 +14,26 @@
         <input type="checkbox" id="checkbox">
         <label for="checkbox" class="checkbtn"> 
             <i class="fas fa-bars" ></i></label>
-        <label class="logo">Odstampaj mi sliku</label>
+        <label class="logo">Odštampaj mi sliku</label>
             <ul>
-                <li class="nav"><a class="" href="/">Pocetna</a></li>
+                <li class="nav"><a class="" href="/">Početna</a></li>
                 <li class="nav"><a href="/about-us">O nama</a></li>
-                <li class="nav"><a href="/">Usluge</a></li>
-                <li class="nav"><a href="/send">Naruci</a></li>
+                <li class="nav"><a href="/send">Naruči</a></li>
             </ul>
     </nav>
     <%- body %> 
     <br>
 <footer>
  <div class="faq">
-    <h1>Cesta Pitanja</h1>
+    <h1>Česta Pitanja</h1>
     <div class="feqsi">
         <div class="pitanja">
             <div class="list"><p>U kojim dimenzijama su dostupne fotografije za izradu</p><span>&#43</span></div>
             <div class="tex">Slike mozemo raditi u svim dimenzijama</div>
            </div>
             <div class="pitanja">
-                <div class="list"><p>Koji je maksimalan broj slika za porucivanje? </p><span>&#43</span></div>
-                <div class="tex">Mi verujemo da nase musterije treba da imaju pravo na koliko god slika im dusa zeli :)</div>
+                <div class="list"><p>Koji je maksimalan broj slika za poručivanje? </p><span>&#43</span></div>
+                <div class="tex">Mi verujemo da naše musterije treba da imaju pravo na koliko god slika im duša zeli :)</div>
                 </div>
                 <div class="pitanja">
                     <div class="list"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p><span>&#43</span></div>
@@ -45,7 +44,7 @@
                         <div class="tex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repudiandae unde dolores. Fuga facilis perspiciatis necessitatibus assumenda, quisquam consequatur beatae aut voluptatum ut, ducimus ab aliquam, consequuntur veritatis debitis reprehenderit.</div>
                         </div>
     </div>
-    <div class="contact-us">Contact us</div>
+    <div class="contact-us">Naruči</div>
  </div>
  <div class="lets-work-together">
     <div class="mapa">
@@ -53,10 +52,10 @@
     </div>
     <div class="name-and-stuff">
         <form action="/sendEmail" method="post">
-            <div><input type="text" name="imezagmail" placeholder="Name"></div>
-             <div><input type="email"  placeholder="E-Mail" pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" name="gmailzagmail"></div>
-             <div><textarea name="porukazagmail" id="" cols="30" rows="10" placeholder="Message"></textarea></div>
-            <button type="submit">Submit</button>
+            <div><input type="text" name="imezagmail" required placeholder="Name"></div>
+             <div><input type="email"  placeholder="E-Mail" required pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" name="gmailzagmail"></div>
+             <div><textarea required name="porukazagmail" id="" cols="30" rows="10" placeholder="Message"></textarea></div>
+            <button type="submit">Potvrdi</button>
         </form>
     </div>
 
