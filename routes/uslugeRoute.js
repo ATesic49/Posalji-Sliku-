@@ -4,7 +4,7 @@ const nodemailer  = require('nodemailer');
 router.use(express.static('public'))
 
 router.get('/',(req,res)=>{
-    res.render('naruciPage')
+    res.render('uslugePage')
 })
 
 

@@ -1,0 +1,71 @@
+#usluge .prvi {
+    min-height: 1200px;
+    display:flex;
+    flex-direction: column;
+}
+#usluge .prvi .gornji-deo{
+    min-height: 400px;
+    display: flex;
+    position: relative;
+}
+#usluge .prvi .gornji-deo .text{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+#usluge .prvi .gornji-deo .text h1{
+    font-size: var(--font-size-x-large);
+}
+#usluge .prvi .donji-deo{
+    background-image: url(./imagesForSite/handshake.webp);
+    position: relative;
+    min-height: 800px;
+    background-size:cover;
+    background-position: center;
+}
+#usluge .prvi .donji-deo::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right:0;
+    opacity: 0.5;
+}
+.drugi{
+    min-height: 600px;
+    margin-bottom: -25px;
+    display: flex;
+    flex-direction: column;
+}
+.drugi .gornji-text{
+    min-height: 300px;
+    /* background-color: rgb(225, 225, 225); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.drugi .gornji-text .heding{
+text-align: center;
+margin: 5% 0 0 0% ;
+font-size: var(--font-size-large);
+}
+.drugi .gornji-text .text{
+    margin: auto 0 10% 0;
+}
+.swiper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+
+}
+.swiper-wrapper{
+min-height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
