@@ -82,16 +82,30 @@
                 </div>
 
                <div style="
+               margin-top: 60px;
                display:flex;
                align-items:center;
                justify-content:center;
                " >
+                               <div style="
+                               display:flex;
+                               align-items:center;
+                               justify-content:center;">
+                               <label for="dimenzije">Tip stampe:
+                               <br>
+                                   <select name="dimenzije" id="dimenzije">
+                                       <option value="35">Fotografija 9x13</option>
+                                       <option value="45">Fotografija 10x15</option>
+                                       <option value="55">Fotografija 13x18</option>
+                                       <option value="120">Fotografija 15x21</option>
+                                   </select>
+                                </label>
+                               </div>
                 <label for="numberOfCopies"> Broj Kopija: <br>
                     <input style="width:75px" id="brKop" type="number" min="1" id="numberOfCopies" name="numberOfCopies" value= <%= locals.valueForNumber || 1 %> </div>
                 </label>
-                
-
                </div>
+             
                <div>
                 <p style="font-weight: 600;">Cena: <span style="color: rgb(0, 128, 0);" id="cena">&nbsp;0</span> dinara</p>
             </div>

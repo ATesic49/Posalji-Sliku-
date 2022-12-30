@@ -157,6 +157,7 @@ cursor: pointer;
 label[for="images"]{
     transition: 0.5s;
     position: fixed;
+    top: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,8 +173,13 @@ transition: .5;
 label[for="images"]:hover{
     background-color: rgb(111, 111, 111);
 }
-
-
+select{
+    padding: 10px;
+    margin: 5px 20px;
+    outline: none;
+    border-radius: 0;
+    border: 1px #646464 solid;
+}
 
 @media screen and (max-width:1020px) {
     nav .logo{
