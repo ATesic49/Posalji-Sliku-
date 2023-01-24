@@ -7,15 +7,21 @@
         const inputFiles = document.querySelector("#images")
         const cena = document.querySelector('#cena')
         const brKop = document.querySelector("#brKop")
+    const dimenzije = document.querySelector('select')
         inputFiles.addEventListener('change',()=>{
-            const broj = inputFiles.files.length*20*brKop.value
+            const broj = inputFiles.files.length*brKop.value*dimenzije.value
             cena.innerHTML =broj
 
         })
         brKop.addEventListener('change',()=>{
-            const broj = inputFiles.files.length*20*brKop.value
+            const broj = inputFiles.files.length*brKop.value*dimenzije.value
             cena.innerHTML =broj
         })
+    dimenzije.addEventListener('change',()=>{
+        const broj = inputFiles.files.length*brKop.value*dimenzije.value
+        cena.innerHTML =broj
+
+    })
 
 
         const naruciCena = document.querySelector('.naruci-cena')
@@ -80,22 +86,3 @@ if(phoneNumber.length<13){
 
 
 })
-     
-
-        
-         
-
-            
-
-    //     function formatPhoneNumber(parametar){
-    //         if (!parametar) return parametar
-    //         const phoneNumber = parametar.replace(/[^\d]/g,'')
-    //         const phoneNumberLength = phoneNumber.length
-    //         if(phoneNumberLength <4) return phoneNumber
-    //         if (phoneNumberLength<7) {
-    //             return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`
-    //     } else{
-    //         return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3,6)} ${phoneNumber.slice(6)}`
-    //     }
-        
-    // }
