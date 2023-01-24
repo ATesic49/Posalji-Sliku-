@@ -8,7 +8,20 @@
         const cena = document.querySelector('#cena')
         const brKop = document.querySelector("#brKop")
     const dimenzije = document.querySelector('select')
+const zaSlike = document.querySelector('.zaslike')
+
         inputFiles.addEventListener('change',()=>{
+        console.log(inputFiles.value)
+           for (let index = 0; index < inputFiles.files.length; index++) {
+            const broj = inputFiles.files[index];
+        zaSlike.innerHTML = `${inputFiles.files.length} files selected `
+            
+           }
+           if (inputFiles.files.length === 1 ){
+        zaSlike.innerHTML = `${inputFiles.files.length} file selected `
+            
+           }
+           
             const broj = inputFiles.files.length*brKop.value*dimenzije.value
             cena.innerHTML =broj
 
@@ -28,7 +41,7 @@
         const naruciSliku = document.querySelector('.naruciSliku')
         const iskljuciSliku = document.querySelector('.iskljuciSliku')
         const container = document.querySelector('.container')
-        const containerAfter = window.getComputedStyle(container,'::after')
+        const containerAfter = window.getComputedStyle(container,'::after') 
         naruciSliku.addEventListener('click',()=>{  
             naruciCena.classList.add('flex')
             container.style.setProperty('--displayAfter-','flex')
@@ -86,3 +99,4 @@ if(phoneNumber.length<13){
 
 
 })
+

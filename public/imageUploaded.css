@@ -1,19 +1,109 @@
+footer{
+    display: none;
+}
+
+
+
+.container{
+    width: 100%;
+    min-height:300px ;
+    margin-bottom: -50px;
+}
+
+.container .slika{
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    position: relative;
+    background-image:url(./imagesForSite/people-on-beach.jpg);
+
+}
+.container .slika::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+.container .oblastnaslici{
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+}
+.container .slika .text{
+    color:white;
+}
+.container .slika  p{
+   color: white; 
+}
+
+.container .slika a{
+    border: 2px solid black;
+    padding:10px;
+    background: transparent;
+    transition: .25s;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+
+}
+
+.container a:hover{
+    background-color: black;
+    color: white;
+}
+
 .slika{
+    margin-bottom:-20px;
     display: inline-block;
 }
 .imejl{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .imejl a{
     padding: 10px;
     margin: 5px 20px;
     outline: none;
-    width: 200px;
     border-radius: 0;
     border: 1px #646464 solid;
     text-align: center;
     color: black;
 }
+.container .slika .oblastnaslici .sve-slike{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    max-width: 80%;
+    max-height: 200px;
+}
+.container .slika .oblastnaslici .sve-slike .slikam{
+    margin: 0 10px;
+}
+
+@media screen and (max-width:500px) {
+    .container .slika a{
+        font-size: 10px !important;
+        margin-left: -10%;
+    }
+    .container .oblastnaslici{
+        margin-left: -25px;
+    }
+}   

@@ -404,4 +404,9 @@ footer .name-and-stuff textarea{
        position: fixed;
        left: -20px;
     }
+    i{
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
 }   

@@ -44,7 +44,7 @@ router.get('/',(req,res)=>{
     })
 })
 
-router.post('/',upload.array('images',150),(req,res)=>{
+router.post('/',upload.array('images',250),(req,res)=>{
     error = ''
    
     let fileNameArray=[]
@@ -56,7 +56,12 @@ fileNameArray.forEach(fileName=>{
 const attachment = {filename:fileName,path:path.join('public/images',fileName)}
 attachments.push(attachment)
 })
-console.log(attachments)
+if (attachments.length>=4){
+
+for (let i = 0; i < attachments.length; i=i+4) {
+    const realAttachments = attachments.slice(i,i+4)
+    console.log( realAttachments)
+
     const mailOptions = {
         from:'aleksasmailsender@gmail.com',
         to:req.body.sendersGmail,
@@ -64,9 +69,10 @@ console.log(attachments)
         text:`Broj Kopija:${req.body.numberOfCopies};
         Adresa:${req.body.VasaUlica},${req.body.opstinaStanovanja};
         Broj Tel.:${req.body.brojTel}
-        Cena:${req.body.numberOfCopies*20*req.files.length}dinara`,
-        attachments:attachments
+        Cena:${req.body.numberOfCopies*req.body.dimenzije*req.files.length}dinara`,
+        attachments:realAttachments
     }
+
 
     transporter.sendMail(mailOptions,(err,info)=>{
         if (err) {
@@ -75,7 +81,33 @@ console.log(attachments)
             console.log(info)
         }
     });
+}
 
+
+
+  
+}else{
+
+
+    const mailOptions = {
+        from:'aleksasmailsender@gmail.com',
+        to:req.body.sendersGmail,
+        subject:'Slike Za Stampanje',
+        text:`Broj Kopija:${req.body.numberOfCopies};
+        Adresa:${req.body.VasaUlica},${req.body.opstinaStanovanja};
+        Broj Tel.:${req.body.brojTel}
+        Cena:${req.body.numberOfCopies*req.body.dimenzije*req.files.length}dinara`,
+        attachments:attachments
+    }
+    transporter.sendMail(mailOptions,(err,info)=>{
+        if (err) {
+            console.log(err)
+        }else{
+            console.log(info)
+        }
+    });
+
+}
 
 
 res.render('imageUploaded',{
@@ -83,10 +115,5 @@ imgSrc:fileNameArray,
 email:req.body.sendersGmail,
 numberOfCopies:req.body.numberOfCopies
 })
-
 })
-
-
-
-
 module.exports = router

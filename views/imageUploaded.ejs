@@ -13,18 +13,34 @@
         <link rel="stylesheet" href="imageUploaded.css">
 </head>
 <body>
-    <div class="sve-slike">
-     <%imgSrc.forEach(file=>{ %> 
+    <div class="container prvo">
         <div class="slika">
-            <img src=<%='/images/'+file%>   alt="" width="200px" height="100px"> 
-        </div>
-   <% }) %> 
-</div>
-   <div>
-    >
+            <div class="oblastnaslici">
+                <div class="text"><h1>Hvala Vam na saradjivanju!</h1></div>
+                  <div class="sve-slike">
+                    <p>Proverite Vase Slike:</p>
+                     <% if (imgSrc < 5){ %>
+                        <% console.log('hdadasi')%>
+                        <% } %>
+                    <%imgSrc.forEach(file=>{ %> 
+                       <div class="slikam">
+                           <img src=<%='/images/'+file%> width="150px" height="100px"> 
+                       </div>
+                  <% }) %>
+               </div>
+                <p> Proverite Vas Gmail:</p>     
+                <div class="imejl">
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><%= email %> </a>
+                </div>    
+            </div>
+           
+              <div>
+           
+               
 
-    <div class="imejl">
-    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><%= email %> </a>
-</div>
+
+        </div>
+    </div>
+ 
 </body>
 </html>
