@@ -29,7 +29,7 @@ nav{
     position:fixed;
     z-index: 3;
     background: var(--primary-color);
-    height: 70px;
+    min-height: 70px;
     width: 100%;
     top: 0;
     right: 0;
@@ -59,6 +59,7 @@ nav ul li a {
     padding: 7px 13px;
     font-size:17px;
     border-radius: 3px;
+    font-size:16px !important ;
     text-transform: uppercase;
  }
  nav ul li a::after{
@@ -83,9 +84,7 @@ nav .hovered::after{
 nav .checkbtn{
     font-size: 30px;
     color: black;
-    line-height: 80px;
     float: right;
-    margin-right: 80px;
     cursor: pointer;
     display: none;
 }
@@ -108,8 +107,9 @@ nav .checkbtn{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c3e50;
-        top:80px;
+        background: #ffffff;
+        top:60px;
+        padding-top: 20px;
         left: -100%;
         transition: all .5s;
         text-align: center;
@@ -121,15 +121,27 @@ nav .checkbtn{
         padding: 5vh 40% 5vh 40%;
     }
     nav ul li a:hover{
-        font-size: 18px;
-transition: .2s ease-in;
-background-color: #242d37;
+transition: .5s ease-in;
+background-color: #000000;
+color: white;
+
     }
 }
 
+.checkbtn{
+    right: 20px;
+}
+.fa-bars:before {
+    content: "\f0c9";
+    right: 20px;
+    position: absolute;
+}
 #checkbox:checked ~ ul{
     left:0;
 }
+
+
+
 /* FOOTER */
 
 
@@ -304,7 +316,7 @@ footer .name-and-stuff textarea{
     border-color: white;
     }
 
-
+    
     /* THE REAL FOOTER */
     footer{
         position: relative;
@@ -376,7 +388,8 @@ footer .name-and-stuff textarea{
 
 
 /* MEDIA */
-@media screen and (max-width:925px) {   
+@media screen and (max-width:925px) {  
+
     footer .lets-work-together {
         display: flex;
         flex-direction: column;
@@ -392,21 +405,61 @@ footer .name-and-stuff textarea{
         display: none;
     } 
     footer .footer .fbi{
-    position: absolute  ;
+    position: absolute;
     bottom: 10px;
     left: 20px;
     margin: 0;
     }
     }
 @media screen and (max-width:500px) {
+    .nav a{
+        font-size: 10px !important;
+    } 
     nav .logo{
         font-size: 20px !important;
        position: fixed;
-       left: -20px;
+       left: 20px;
     }
     i{
-        position: absolute;
-        right: 5px;
-        top: 20px;
+        position: static;
+  
     }
 }   
+@media screen and (max-width:370px){
+    *{
+        --font-size-small:8px;
+        --font-size-mid:15px;
+        --font-size-large:18px;
+        --font-size-x-large: 22px;
+    }
+#home .trece .natpiss p {
+    font-size: 12px;
+}
+#home .cetvrtoa .text4{
+    font-size: 12px;
+    width: 100% !important;
+}
+    nav label.logo{
+        font-size: 30px;
+        padding: 0px;
+        left:10px
+    }
+    i{
+        right: auto;
+    }
+    #about .treci{
+        margin: 0 !important;
+    }
+    footer .faq div p{
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+    }
+    .checkbtn{
+        margin: 0;
+
+    }
+}
+
+@media screen and (max-width:300px){
+    
+}
